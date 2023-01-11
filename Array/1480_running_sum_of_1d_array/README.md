@@ -3,6 +3,7 @@
 parameter int* returnSize를 제외하고 생각하면, loop를 돌면서 더하면 된다고 생각했다. 
 아무리 찾아도 returnSize의 단서를 찾을 수 없어, Discussion을 참조하였다. 
 returnSize는 array의 size 할당이라고 보면 된다. 
+<br>
 i.e. 
 ```    
 nums = [1,2,3,4]
@@ -20,9 +21,11 @@ Local variable을 iterate하면서 index element만큼 더한다.
 # Complexity
 - Time complexity:
 <!-- Add your time complexity here, e.g. $$O(n)$$ -->
+$$O(n)$$
 
 - Space complexity:
 <!-- Add your space complexity here, e.g. $$O(n)$$ -->
+$$O(1)$$
 
 # Code
 ```
