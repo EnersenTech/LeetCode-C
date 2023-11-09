@@ -1,16 +1,16 @@
 # Intuition
 <!-- Describe your first thoughts on how to solve this problem. -->
-nums = [5,19,8,1]
+nums = [5,19,8,1] <br>
 
 sum(nums) = 33 
 
-original 1 + 5 + 8 + 19  = 33 
-Trial 1 -> 19/2 = 9.5 ... 33 - 9.5 = 23.5 > 16.5 
-Proceed 
-Trial 2 -> 9.5/2 = 4.75 ... 18.5 > 16.5 
-Proceed 
-Trial 3 -> 8/2 = 4 ... 14.5 < 16.5 
-Done! 
+original 1 + 5 + 8 + 19  = 33 <br>
+Trial 1 -> 19/2 = 9.5 ... 33 - 9.5 = 23.5 > 16.5 <br>
+Proceed <br>
+Trial 2 -> 9.5/2 = 4.75 ... 18.5 > 16.5 <br>
+Proceed <br>
+Trial 3 -> 8/2 = 4 ... 14.5 < 16.5 <br>
+Done! <br>
 
 합계에서 가장 적은 횟수로 절반을 만들기 위해서는 큰 수를 절반으로 만드는 것이다. 가장 큰 수를 찾고 그 수를 절반으로 만들어서 넣고 합계를 구하고 
 해당 합계가 기존의 절반 보다 작아야 한다.
@@ -20,8 +20,8 @@ Done!
 <!-- Describe your approach to solving the problem. -->
 처음 아이디어는 vector sum을 구하고 Heap을 업데이트 하며 Heap sum을 사이클 마다 체크하려고 했다. Heap의 sum이 vector sum보다 작으면 break하는 형식으로. 
 
-그러나, Heap의 sum을 구하는 방법을 몰라 별도의 while loop를 만들어서 실행했더니 Test Input 갯수가 많아지면, 너무 실행이 오래 걸려서 실패했다. 2중 루프를 도는 것이므로 $$O(N^2)$$이 되어 버렸다.
-
+그러나, Heap의 sum을 구하는 방법을 몰라 별도의 while loop를 만들어서 실행했더니 Test Input 갯수가 많아지면, 너무 실행이 오래 걸려서 실패했다. 2중 루프를 도는 것이므로 $$O(N^2)$$
+<br>
 그래서 그냥 기존 sum에서 max를 half한 값을 빼서 그 값이 vector sum보다 작으면 break하도록 했다. 
 이렇게 하면 굳이 Heap의 elements sum을 구하지 않아도 된다.
 
