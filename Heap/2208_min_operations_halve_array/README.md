@@ -96,9 +96,7 @@ public:
         // Operation counter 
         unsigned int opCounter = 0; 
 
-        // 33 16.5  33 - 9.5 =  
         while(nums_sum / 2 < half){
-            //if(nums_sum / 2 > this->AddHeap(pq)) return opCounter;
             double max_val = pq.top(); 
             pq.pop();
             max_val = max_val / 2; 
